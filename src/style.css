@@ -147,3 +147,11 @@ a:hover {
   font-weight: bold;
   font-size: 15px;
 }
+.githubLink {
+  color: #757575;
+}
+footer {
+  position: relative;
+  top: -120px;
+  right: -260px;
+}
