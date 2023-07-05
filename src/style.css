@@ -151,7 +151,8 @@ a:hover {
   color: #757575;
 }
 footer {
-  position: relative;
+  position: absolute;
   top: -120px;
   right: -260px;
+  width: 100%;
 }
