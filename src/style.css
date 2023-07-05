@@ -150,9 +150,6 @@ a:hover {
 .githubLink {
   color: #757575;
 }
-footer {
-  position: absolute;
-  top: -120px;
-  right: -260px;
-  width: 100%;
+p {
+  text-align: center;
 }
