@@ -75,7 +75,7 @@ function getCurrentLocation(event) {
 
 let form = document.querySelector("#search-form");
 let magnifyingGlass = document.querySelector("#big");
-magnifyingGlass.addEventListener("submit", handleSubmit);
+magnifyingGlass.addEventListener("click", handleSubmit);
 form.addEventListener("submit", handleSubmit);
 
 let currentLocationButton = document.querySelector("#show-current-location");
