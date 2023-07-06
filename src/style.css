@@ -9,13 +9,13 @@ body {
 }
 .container {
   background-color: #bbcacf;
+  box-shadow: 5px 5px 10px rgba(61, 77, 109, 0.4);
   border: solid #fff;
   border-radius: 30px;
-  padding: 30px;
-  margin: 40px auto;
-  font-weight: 200;
+  padding: 15px;
+  margin: 25px auto;
   max-height: 490px;
-  max-width: 70%;
+  max-width: 800px;
 }
 
 h1,
