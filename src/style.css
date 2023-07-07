@@ -66,6 +66,7 @@ a:hover {
 }
 .tempInfo {
   font-size: 13px;
+  text-transform: capitalize;
 }
 .dayOfWeek1,
 .dayOfWeek2,
