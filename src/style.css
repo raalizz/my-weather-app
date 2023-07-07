@@ -59,7 +59,8 @@ a:hover {
 }
 .units {
   position: relative;
-  top: -34px;
+  top: -25px;
+  margin-left: -15px;
 }
 .tempInfo {
   font-size: 13px;
