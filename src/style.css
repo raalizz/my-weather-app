@@ -55,23 +55,27 @@ form {
 .temperature {
   font-size: 40px;
 }
-a {
-  text-decoration: none;
-  color: #fff;
-}
-a:hover {
-  text-decoration-line: underline;
-}
-.units {
-  position: relative;
-  top: -25px;
-  margin-left: -15px;
-}
+
 .tempInfo {
   font-size: 13px;
 }
 .tempInfo:first-letter {
   text-transform: capitalize;
+}
+a {
+  text-decoration: none;
+}
+.active {
+  color: #757575;
+  cursor: default;
+}
+.active:hover {
+  text-decoration: none;
+}
+.units {
+  position: relative;
+  top: -25px;
+  margin-left: -15px;
 }
 .dayOfWeek1,
 .dayOfWeek2,

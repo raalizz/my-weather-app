@@ -37,9 +37,9 @@ window.setInterval(updateTime, 1000);
 //show city and weather info using API
 function displayWeather(response) {
   document.querySelector("h1").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  celsiusTemp = response.data.main.temp;
+  document.querySelector("#temperature").innerHTML = Math.round(celsiusTemp);
+
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
@@ -53,6 +53,7 @@ function displayWeather(response) {
   let wind = Math.round(response.data.wind.speed);
   document.querySelector("#wind-info").innerHTML = `wind: ${wind} mph`;
 }
+
 function searchCity(city) {
   let apiKey = "20cd239ce7bd47f6ff543a68b3fb7412";
   let units = "metric";
@@ -73,34 +74,42 @@ function searchLocation(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayWeather);
 }
+
 function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
 let form = document.querySelector("#search-form");
-let magnifyingGlass = document.querySelector("#big");
-magnifyingGlass.addEventListener("click", handleSubmit);
+let searchButton = document.querySelector("#big");
+searchButton.addEventListener("click", handleSubmit);
 form.addEventListener("submit", handleSubmit);
 
 let currentLocationButton = document.querySelector("#show-current-location");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-searchCity("Tokyo");
-
 //temp value change
 function convertToFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 73;
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
 }
 function convertToCelsius(event) {
   event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 22;
+  temperatureElement.innerHTML = Math.round(celsiusTemp);
 }
-let celsiusLink = document.querySelector("#celsius-link");
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
 
-celsiusLink.addEventListener("click", convertToCelsius);
+let celsiusTemp = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertToCelsius);
+
+searchCity("Tokyo");
