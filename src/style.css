@@ -45,7 +45,7 @@ form {
   padding: 10px 10px;
 }
 
-.sun-one {
+.weatherIcon {
   font-size: 70px;
   position: relative;
   right: -160px;
@@ -77,28 +77,20 @@ a {
   top: -25px;
   margin-left: -15px;
 }
-.dayOfWeek1,
-.dayOfWeek2,
-.dayOfWeek3,
-.dayOfWeek4,
-.dayOfWeek5,
-.dayOfWeek6 {
+.dayOfWeek {
   text-align: center;
   border: 1px solid #94b4c7;
-  padding: 10px 5px;
+  padding: 5px 5px;
   border-radius: 10px;
   background-color: #94b4c7;
 }
-.sun,
-.cloud,
-.cloud-sun {
-  font-size: 50px;
-  position: relative;
-  top: -10px;
-}
+
 .highTemp {
   font-weight: bold;
   font-size: 18px;
+}
+.lowTemp {
+  color: #757575;
 }
 .githubLink {
   color: #757575;
