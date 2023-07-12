@@ -108,6 +108,8 @@ function displayWeather(response) {
     ${humidity}%`;
   let wind = Math.round(response.data.wind.speed);
   document.querySelector("#wind-info").innerHTML = `wind: ${wind} mph`;
+
+  getForecast(response.data.coord);
 }
 
 function searchCity(city) {
