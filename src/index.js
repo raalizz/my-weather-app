@@ -1,4 +1,4 @@
-//date
+//date and time
 function updateTime() {
   let currentDate = new Date();
   let h7 = document.querySelector("#date");
@@ -19,6 +19,7 @@ function updateTime() {
   hours = hours % 12;
   hours = hours ? hours : 12;
   minutes = minutes < 10 ? "0" + minutes : minutes;
+
   let days = [
     "Sunday",
     "Monday",
@@ -32,6 +33,7 @@ function updateTime() {
 
   h7.innerHTML = `${day} ${hours}:${minutes}:${seconds} ${amPm}`;
 }
+
 window.setInterval(updateTime, 1000);
 
 // to get the forecast days names
