@@ -27,7 +27,7 @@ h3 {
   font-size: 35px;
 }
 button {
-  display: block;
+  display: flex;
   margin: 20px auto;
   padding: 10px 20px;
   width: 100px;

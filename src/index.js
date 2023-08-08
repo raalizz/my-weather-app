@@ -67,6 +67,7 @@ function displayForecast(response) {
                     alt=""
                     width="40"
                     class="sun" 
+                    class="img-fluid"
                   />
                   <br />
                   <span class="highTemp">${Math.round(
