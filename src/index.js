@@ -57,7 +57,7 @@ function displayForecast(response) {
       forecastHTML =
         forecastHTML +
         `
-              <div class="col">
+              <div class="col-sm">
                 <div class="dayOfWeek">
                   <h4>${formatDay(forecastDay.dt)}</h4>
                   <img
