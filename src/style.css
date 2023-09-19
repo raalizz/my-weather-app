@@ -105,7 +105,7 @@ p {
 
 @media (max-width: 900px) {
   .form-control {
-    width: 330px;
+    width: 350px;
   }
   .container {
     max-height: 100%;
