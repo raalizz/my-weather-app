@@ -102,3 +102,38 @@ a {
 p {
   text-align: center;
 }
+
+@media (max-width: 900px) {
+  .form-control {
+    width: 330px;
+  }
+  .container {
+    max-height: 100%;
+  }
+  p {
+    color: #000;
+  }
+  body {
+    color: #000;
+  }
+  button {
+    color: #000;
+  }
+  .weatherIcon {
+    top: 20px;
+    right: -130px;
+  }
+  .temperature {
+    position: relative;
+    top: -225px;
+    right: -250px;
+  }
+  .units {
+    position: relative;
+    top: -250px;
+    right: -250px;
+  }
+  h7 {
+    display: none;
+  }
+}
